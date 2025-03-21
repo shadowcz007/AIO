@@ -242,15 +242,19 @@ method：help
 
 需要返回类型：stdio、mcp、http
 ```bash
-echo '{"method": "help"}' | xxxx
+echo '{"jsonrpc": "2.0","method": "help","id":1}' | xxxx
 ```
+
+如果返回的type是mcp，则按照mcp的调用使用即可。
+如果是stdio和http：按照aio标准
+
 
 method：start
 根据不同类型，使用不同的启动服务方式，如果help配置里没有返回start，则不需要初始化启动服务
 
 启动服务
 ```bash
-echo '{"method": "start"}' | xxxx
+echo '{"jsonrpc": "2.0","method": "start"}' | xxxx
 ```
 
 method：input
@@ -258,7 +262,7 @@ method：input
 
 调用方法
 ```bash
-echo '{"method": "input"}' | xxxx
+echo '{"jsonrpc": "2.0","method": "input"}' | xxxx
 ```
 
 
