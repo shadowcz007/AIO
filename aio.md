@@ -238,7 +238,7 @@ cat data.json | python aio_tool.py | jq .
 
 获取配置信息
 
-method：help
+method：help（通过stdio、http-GET请求）获取
 
 需要返回类型：stdio、mcp、http
 ```bash
