@@ -234,3 +234,20 @@ echo '{"data": "test"}' | python aio_tool.py --format json
 # 管道操作
 cat data.json | python aio_tool.py | jq .
 ```
+
+
+获取配置信息
+```bash
+echo '{"method": "help"}' | xxxx
+```
+
+调用方法
+```bash
+echo '{"method": "input"}' | xxxx
+```
+
+启动服务
+```bash
+echo '{"method": "start"}' | xxxx
+```
+
